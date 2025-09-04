@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conatct and Loaction</title>
+    <style>
+    .map-responsive{
+        overflow: hidden;
+        padding-button: 56.25%;
+        position: relative;
+        height: 0;    
+    }    
+    .map-responsive iframe{
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        positon: absolute;
+        border: 0;
+    }
+    .location-section{
+        margin-top:40px;
+    }
+    </style>
+</head>
+<body>
+    <h2>Coatact Us</h2>
+    <form method="POST">
+        {%csrf_token %}
+        {{ from.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="location-section">
+        <h2>Our Loaction</h2>
+        <p> flavour tower</p>
+
+        <div class="map-responsive">
+            <iframe
+              src="https://www.google.com/maps/embed"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</body>
+</html>                  
