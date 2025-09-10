@@ -15,3 +15,11 @@ class MenuItem(models.Model):
 
     def __str__(self):
         return f"{self.name} - $(self.price)"
+
+class Restaurant(models.Model):
+    name = models.CharField(max_lenght=100)
+    address = models.TextField()
+
+    def __str__(self):
+        return self.name
+
